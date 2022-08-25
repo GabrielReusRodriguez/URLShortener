@@ -40,6 +40,9 @@ long_url = None
 if len(sys.argv) == 1:
     long_url = input("Introduce la URL para acortar: ")
     shortener = pyshorteners.Shortener().tinyurl
+elif len(sys.argv) == 2:
+    long_url = sys.argv[1]
+    shortener = pyshorteners.Shortener().tinyurl
 else:
     try:
         options, args  = getopt.getopt(sys.argv[1:], "h",
@@ -98,4 +101,4 @@ except ShorteningErrorException  as err:
     print("ERROR al acortar la url del proveedor: ",err)
     exit(1)
 
-print("La URL acortada es: \n\n"+ short_url+"\n" )
+print(short_url)
