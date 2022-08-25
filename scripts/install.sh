@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-cp ./src/UrlShortener.py /usr/local/bin/UrlShortener
+cp ./src/urlShortener.py /usr/local/bin/urlShortener
